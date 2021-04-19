@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@placement-tci/shared/storybook": ["libs/shared/storybook/src/index.ts"],
+      "@placement-tci/shared/example-test": [
+        "libs/shared/example-test/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

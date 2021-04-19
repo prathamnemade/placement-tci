@@ -1,13 +1,13 @@
 {
-  "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+  "extends": ["plugin:@nrwl/nx/react", "../../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
         "project": [
-          "apps/placement-tci/tsconfig.*?.json",
-          "apps/placement-tci/.storybook/tsconfig.json"
+          "libs/shared/example-test/tsconfig.*?.json",
+          "libs/shared/example-test/.storybook/tsconfig.json"
         ]
       },
       "rules": {}
