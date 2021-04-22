@@ -12,7 +12,7 @@ const App = () => {
     <Provider store={store}>
       <div>Hi!</div>
       <SharedExampleTest />
-      <div>Hi!</div>
+      <p>To test this p block</p>
       <img src="/assets/empanelmentBG.png" />
     </Provider>
   );

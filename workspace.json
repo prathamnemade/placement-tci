@@ -29,11 +29,14 @@
               "apps/placement-tci/src/assets",
               {
                 "input": "libs/shared/assets/src/lib",
-                "glob": "*.png",
+                "glob": "**/*",
                 "output": "assets"
               }
             ],
-            "styles": ["apps/placement-tci/src/styles.scss"],
+            "styles": [
+              "apps/placement-tci/src/styles.scss",
+              "libs/shared/styles/src/index.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -226,6 +229,25 @@
           "outputs": ["coverage/libs/shared/assets"],
           "options": {
             "jestConfig": "libs/shared/assets/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-styles": {
+      "root": "libs/shared/styles",
+      "sourceRoot": "libs/shared/styles/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/shared/styles/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/styles"],
+          "options": {
+            "jestConfig": "libs/shared/styles/jest.config.js",
             "passWithNoTests": true
           }
         }

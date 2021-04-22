@@ -19,7 +19,8 @@
       "@placement-tci/shared/example-test": [
         "libs/shared/example-test/src/index.ts"
       ],
-      "@placement-tci/shared/assets": ["libs/shared/assets/src/index.ts"]
+      "@placement-tci/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@placement-tci/shared/styles": ["libs/shared/styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
