@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/placement-tci',
     '<rootDir>/libs/shared/storybook',
     '<rootDir>/libs/shared/example-test',
+    '<rootDir>/libs/shared/assets',
   ],
 };

@@ -26,7 +26,12 @@
             "tsConfig": "apps/placement-tci/tsconfig.app.json",
             "assets": [
               "apps/placement-tci/src/favicon.ico",
-              "apps/placement-tci/src/assets"
+              "apps/placement-tci/src/assets",
+              {
+                "input": "libs/shared/assets/src/lib",
+                "glob": "*.png",
+                "output": "assets"
+              }
             ],
             "styles": ["apps/placement-tci/src/styles.scss"],
             "scripts": [],
@@ -204,6 +209,25 @@
             "config": { "configFolder": "libs/shared/example-test/.storybook" }
           },
           "configurations": { "ci": { "quiet": true } }
+        }
+      }
+    },
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/shared/assets/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/assets"],
+          "options": {
+            "jestConfig": "libs/shared/assets/jest.config.js",
+            "passWithNoTests": true
+          }
         }
       }
     }

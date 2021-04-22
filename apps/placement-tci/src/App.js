@@ -13,6 +13,7 @@ const App = () => {
       <div>Hi!</div>
       <SharedExampleTest />
       <div>Hi!</div>
+      <img src="/assets/empanelmentBG.png" />
     </Provider>
   );
 };

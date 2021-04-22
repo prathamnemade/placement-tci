@@ -24,12 +24,13 @@
     }
   },
   "projects": {
-    "placement-tci": { "tags": [] },
+    "placement-tci": { "tags": [], "implicitDependencies": ["shared-assets"] },
     "placement-tci-e2e": {
       "tags": [],
       "implicitDependencies": ["placement-tci"]
     },
     "shared-storybook": { "tags": [] },
-    "shared-example-test": { "tags": [] }
+    "shared-example-test": { "tags": [] },
+    "shared-assets": { "tags": [] }
   }
 }
